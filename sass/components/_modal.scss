@@ -1,0 +1,318 @@
+/* Модальне вікно */
+
+.backdrop {
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $modalBackdropBgColor;
+  opacity: 1;
+  transition: background-color $timeHover $cubicFunction,
+    opacity $timeHover $cubicFunction,
+    visibility $timeHover $cubicFunction;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include breakpoint(tablet-max) {
+    width: 450px;
+    height: 608px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 528px;
+    height: 581px;
+  }
+
+  background-color: $modalBgColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform $timeHover $cubicFunction;
+}
+
+.modal__close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  background: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.modal__title {
+  text-align: center;
+  margin: 40px 40px 12px 40px;
+  @include breakpoint(tablet-max) {
+    width: 370px;
+  }
+
+}
+
+.title-text {
+  @include breakpoint(tablet-max) {
+    @include font(700, 20px, calc(30 / 20));
+  }
+
+  @include breakpoint(desktop) {
+    @include font(700, 20px, calc(23 / 20));
+  }
+
+  color: $secondaryTextColor;
+}
+
+.modal-form {
+  margin: 0 40px;
+
+  @include breakpoint(tablet-max) {
+    height: 528px;
+  }
+
+  @include breakpoint(desktop) {
+    height: 501px;
+  }
+}
+
+.modal-form__items {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.modal-form__label {
+
+  @include breakpoint(tablet-max) {
+    width: 370px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 423px;
+  }
+
+  @include font(400, 12px, calc(14 / 12));
+
+  letter-spacing: 0.01em;
+  color: $modalTextInfoColor;
+}
+
+.modal-form__input {
+  margin-top: 4px;
+  padding-left: 42px;
+
+  @include breakpoint(tablet-max) {
+    width: 370px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 448px;
+  }
+
+  height: 40px;
+
+  @include font(400, 12px, calc(14 / 12));
+
+  letter-spacing: 0.01em;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border $timeHover $cubicFunction;
+}
+
+.modal-form__input:focus {
+  border: 1px solid #2196f3;
+  outline: none;
+}
+
+.modal-form__input:-webkit-autofill {
+  box-shadow: 0 0 0 100px $primaryBgColor inset;
+}
+
+.modal-form__icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  fill: currentColor;
+  transition: fill $timeHover $cubicFunction;
+}
+
+.modal-form__items:focus-within .modal-form__icon {
+  fill: $modalIconColorAccent;
+}
+
+.modal-form__comment {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: 138px;
+  margin-bottom: 20px;
+}
+
+.modal-form__text {
+  margin-top: 4px;
+  padding: 12px 16px;
+
+  height: 120px;
+
+  @include breakpoint(tablet-max) {
+    width: 370px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 448px;
+  }
+
+  @include font(400, 12px, calc(14 / 12));
+
+  letter-spacing: 0.01em;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border $timeHover $cubicFunction;
+}
+
+.modal-form__text::placeholder {
+
+  @include breakpoint(tablet-max) {
+    @include font(400, 14px, calc(16 / 14));
+  }
+
+  @include breakpoint(desktop) {
+    @include font(400, 12px, calc(14 / 12));
+  }
+
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form__text:focus {
+  border: 1px solid #2196f3;
+}
+
+.modal-form__text:focus {
+  outline: none;
+}
+
+/* checkbox */
+
+.checkbox {
+  display: flex;
+  @include breakpoint(desktop) {
+    margin-left: 12px;
+  }
+}
+
+
+.checkbox__label {
+  display: flex;
+  height: 24px;
+  flex-direction: row;
+  align-items: center;
+
+  @include breakpoint(tablet-max) {
+    @include font(400, 12px, calc(14 / 12));
+  }
+
+  @include breakpoint(desktop) {
+    @include font(400, 14px, calc(24 / 14));
+  }
+}
+
+.checkbox__input {
+  position: absolute;
+  top: 45px;
+  appearance: none;
+}
+
+.checkbox__border {
+  display: flex;
+  margin-right: 7px;
+  
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: border $timeHover $cubicFunction,
+    background-color $timeHover $cubicFunction,
+    background-origin $timeHover $cubicFunction,
+    background-size $timeHover $cubicFunction;
+}
+
+.checkbox__input:checked + .checkbox__border {
+  border: none;
+  background-color: #2196f3;
+  background-origin: border-box;
+  background-size: contain;
+}
+
+.checkbox__icon {
+  display: flex;
+
+  cursor: pointer;
+
+  fill: #ffffff;
+}
+
+.checkbox__label--accent {
+  text-decoration-line: underline;
+  color: #2196f3;
+}
+
+.btn-form {
+  @include breakpoint(tablet-max) {
+    margin: 30px 85px 40px 85px;
+  }
+
+  @include breakpoint(desktop) {
+    margin: 30px 124px 40px 124px;
+  }
+
+  padding: 10px 52px;
+
+  width: 200px;
+  height: 50px;
+
+  @include font(700, 16px, calc(30 / 16));
+
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  color: $tertiaryTextColor;
+  background-color: $primaryBtnBgColor;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background-color $timeHover $cubicFunction;
+}
+
+.btn-form:hover,
+.btn-form:focus {
+  background-color: #188ce8;
+}

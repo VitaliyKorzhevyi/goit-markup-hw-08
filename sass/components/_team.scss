@@ -1,0 +1,73 @@
+/* СЕКЦІЯ: НАША КОМАНДА */
+
+// .team {
+//   background-color: $sectionBgColor;
+// }
+
+// .team__title {
+//   margin-bottom: 50px;
+// }
+
+// .team-list {
+//   display: flex;
+//   gap: 30px;
+// }
+
+// .team-item {
+//   background: $teamListBgColor;
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+//   border-radius: 0px 0px 4px 4px;
+// }
+
+// .team-item__title,
+// .team-item__text {
+//   font-size: 16px;
+//   line-height: 1.19;
+//   text-align: center;
+// }
+
+// .team-item__title {
+//   margin-top: 30px;
+//   margin-bottom: 10px;
+
+//   color: $secondaryTextColor;
+//   font-weight: 500;
+// }
+
+// .team-item__text {
+//   font-weight: 400;
+// }
+
+// /* soc-icons */
+
+// .list-soc {
+//   display: flex;
+//   justify-content: center;
+//   gap: 10px;
+//   margin: 16px 32px 30px 32px;
+// }
+
+// .list-soc__link {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 12px;
+
+//   width: 44px;
+//   height: 44px;
+
+//   border-radius: 50%;
+//   fill: $iconColor;
+//   background-color: $primaryBgColor;
+//   transition: background-color $timeHover $cubicFunction,
+//     fill $timeHover $cubicFunction;
+// }
+
+// .list-soc__link:hover,
+// .list-soc__link:focus {
+//   background-color: $iconBgColor;
+//   fill: $iconColorAccent;
+// }
+
+/* ПРИМІТКА ДЛЯ СЕБЕ: для того щоб розщирити вплив ховера та фокуса, задається зміна одразу лінку! <a href="" class="link-soc"> */

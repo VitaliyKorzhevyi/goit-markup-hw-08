@@ -1,0 +1,260 @@
+/* HEADER */
+.header {
+  background-color: $primaryBgColor;
+  border-bottom: 1px solid #ECECEC;
+
+  .container {
+    @include flex(flex, space-between, center);
+  }
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+
+  @include font(700, 26px, calc(28 / 26));
+  color: $logoText;
+
+  @include breakpoint(tablet) {
+    padding: 26px 0;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 24px 0 25px 0;
+  }
+
+  &--web {
+    color: $accentTextColor;
+  }
+}
+
+.menu-toggle {
+  margin: 10px 0;
+
+  @extend %menu-btn;
+
+  &:hover,
+  &:focus {
+    fill: $iconColorAccent;
+  }
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  width: 100%;
+
+  @include breakpoint(mobile-max) {
+    padding: 48px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $primaryBgColor;
+
+    overflow-y: scroll;
+    pointer-events: none;
+    visibility: hidden;
+
+    transition: transform $timeHover $cubicFunction, visibility $timeHover $cubicFunction;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+    pointer-events: initial;
+    visibility: visible;
+  }
+
+  @include breakpoint(tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 87px;
+  }
+}
+
+.mobile-menu__btn-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  @extend %menu-btn;
+
+  &:hover,
+  &:focus {
+    fill: $iconColorAccent;
+  }
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.list-nav {
+  @include breakpoint(mobile-max) {
+    margin-bottom: 306px;
+  }
+  @include breakpoint(tablet) {
+    display: flex;
+    gap: 50px;
+  }
+  @include breakpoint(desktop) {
+    margin-left: 93px;
+  }
+
+}
+
+.list-nav__item {
+  position: relative;
+}
+
+.list-nav .list-nav__item:not(:last-child) {
+  @include breakpoint(mobile-max) {
+    margin-bottom: 32px;
+  }
+}
+
+
+.list-nav__link {
+  @include font(500, 14px, calc(16 / 14));
+
+  @include breakpoint(mobile-max) {
+    @include font(500, 40px, calc(47 / 40));
+  }
+
+  @include breakpoint(tablet) {
+    padding: 32px 0;
+  }
+
+  @include breakpoint(desctop) {
+    align-items: center;
+    margin-left: auto;
+  }
+  display: block;
+
+  &--current {
+  color: $accentTextColor;
+  }
+
+  color: $secondaryTextColor;
+  transition: color $timeHover $cubicFunction;
+}
+
+.list-nav .list-nav__link--current::after {
+  @include breakpoint(tablet) {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: -3px;
+    width: 100%;
+  
+    border-radius: 2px;
+    border-bottom: 4px solid $navBorderColor;
+  }
+}
+
+.list-nav__link:hover,
+.list-nav__link:focus {
+  color: $accentTextColor;
+}
+
+//    CONTACT
+
+.contacts { 
+
+  display: flex;
+
+  @include breakpoint(mobile-max) {
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+    gap: 32px;
+  }
+
+
+  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+    flex-direction: column;
+    right: 0;
+    margin-left: auto;
+    gap: 10px;
+  }
+
+  @include breakpoint(desktop) {
+    align-items: center;
+    margin-left: auto;
+    gap: 30px;
+  }
+
+}
+
+.contacts__link {
+  display: flex;
+
+  color: $primaryTextColor;
+
+  @include breakpoint(mobile-max) {
+    @include font(500, 24px, calc(28 / 24));
+  }
+
+  @include breakpoint(tablet) {
+    @include font(500, 12px, calc(14 / 12));
+  }
+
+  @include breakpoint(desktop) {
+    @include font(500, 14px, calc(16 / 14));
+
+    align-items: center;
+    padding: 32px 0;
+    margin-right: auto;
+  }
+
+  transition: color $timeHover $cubicFunction;
+}
+
+.contacts__link--current {
+  @include breakpoint(mobile-max) {
+    @include font(500, 34px, calc(40 / 34));
+
+    color: $accentTextColor;
+  }
+}
+
+.menu-soc {
+  @include breakpoint(mobile-max) {
+    display: flex;
+    gap: 10px;
+
+    &__item:not(:first-child) {
+      padding-left: 10px;
+      border-left: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &__link {
+      @include font(500, 18px, calc(22 / 18));
+
+      color: $accentTextColor;
+    }
+  }
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+
+  @include breakpoint(mobile-max) {
+    display: none;
+  }
+}
+
+.contacts__link:hover,
+.contacts__link:focus {
+  @include breakpoint(tablet) {
+    color: $accentTextColor;
+  }
+}

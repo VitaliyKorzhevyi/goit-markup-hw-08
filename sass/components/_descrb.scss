@@ -1,0 +1,58 @@
+/* СЕКЦІЯ З ОПИСОМ */
+
+.descr {
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @include breakpoint(mobile-max) {
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.descr__item {
+  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+    max-width: 354px;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: 270px;
+  }
+}
+
+.descr__icon {
+  height: 70px;
+  width: 70px;
+
+  @include breakpoint(mobile-max) {
+    margin: 25px 190px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+    margin: 25px 142px;
+  }
+
+  @include breakpoint(desktop) {
+    margin: 25px 100px;
+  }
+}
+
+.descr__title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+  @include font(700, 14px, calc(16 / 14));
+
+  @include breakpoint(mobile-max) {
+    text-align: center;
+  }
+}
+
+.descr__text {
+  @include font(400, 14px, calc(24 / 14));
+}
