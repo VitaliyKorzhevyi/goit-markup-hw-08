@@ -145,11 +145,23 @@
 
 <section class="team section">
     <div class="container">
+
     <h2 class="team__title">Наша команда</h2>
+
         <ul class="team-list">
-            <li class="team-item"><img src="./images/img4.jpg" alt="photo1" width="270" height="260">
+
+            <li class="team-item">
+
+                <picture>
+                    <source srcset="./images/team/igor-mob-1x.jpg, ./images/team/igor-mob-2x.jpg 2x" media="(max-width:767.98px)">
+                    <source srcset="./images/team/igor-tab-1x.jpg, ./images/team/igor-tab-2x.jpg 2x"
+                      media="(min-width:768px) and (max-width:1199.98px)">
+                    <source srcset="./images/team/igor-desk-1x.jpg, ./images/team/igor-desk-2x.jpg 2x" media="(min-width:1200px)">
+                    <img src="./images/team/igor-mob-1x.jpg" alt="Ігор Дем'яненко">
+                  </picture>
+
                 <h3 class="team-item__title">Ігор Дем'яненко</h3>
-                <p class="team-item__text">Product Designer</p>
+                    <p class="team-item__text">Product Designer</p>
                 <ul class="list-soc">
                     <li class="">
                         <a href="" class="list-soc__link">
@@ -181,9 +193,19 @@
                     </li>
                 </ul>
             </li>
-            <li class="team-item"><img src="./images/img5.jpg" alt="photo2" width="270" height="260">
+
+            <li class="team-item">
+
+                <picture>
+                    <source srcset="./images/team/olga-mob-1x.jpg, ./images/team/olga-mob-2x.jpg 2x" media="(max-width:767.98px)">
+                    <source srcset="./images/team/olga-tab-1x.jpg, ./images/team/olga-tab-2x.jpg 2x"
+                      media="(min-width:768px) and (max-width:1199.98px)">
+                    <source srcset="./images/team/olga-desk-1x.jpg, ./images/team/olga-desk-2x.jpg 2x" media="(min-width:1200px)">
+                    <img src="./images/team/olga-mob-1x.jpg" alt="Ігор Дем'яненко">
+                </picture>
+
                 <h3 class="team-item__title">Ольга Рєпіна</h3>
-                <p class="team-item__text">Frontend Developer</p>
+                    <p class="team-item__text">Frontend Developer</p>
                 <ul class="list-soc">
                     <li class="item-soc">
                         <a href="" class="list-soc__link">
@@ -215,9 +237,18 @@
                     </li>
                 </ul>
             </li>
-            <li class="team-item"><img src="./images/img6.jpg" alt="photo3" width="270" height="260">
+
+            <li class="team-item">
+                <picture>
+                    <source srcset="./images/team/mukola-mob-1x.jpg, ./images/team/mukola-mob-2x.jpg 2x" media="(max-width:767.98px)">
+                    <source srcset="./images/team/mukola-tab-1x.jpg, ./images/team/mukola-tab-2x.jpg 2x"
+                      media="(min-width:768px) and (max-width:1199.98px)">
+                    <source srcset="./images/team/mukola-desk-1x.jpg, ./images/team/mukola-desk-2x.jpg 2x" media="(min-width:1200px)">
+                    <img src="./images/team/mukola-mob-1x.jpg" alt="Ігор Дем'яненко">
+                </picture>
+
                 <h3 class="team-item__title">Микола Тарасов</h3>
-                <p class="team-item__text">Marketing</p>
+                    <p class="team-item__text">Marketing</p>
                 <ul class="list-soc">
                     <li class="item-soc">
                         <a href="" class="list-soc__link">
@@ -249,7 +280,17 @@
                     </li>
                 </ul>
             </li>
-            <li class="team-item"><img src="./images/img7.jpg" alt="photo4" width="270" height="260">
+
+            <li class="team-item">
+
+                <picture>
+                    <source srcset="./images/team/mih-mob-1x.jpg, ./images/team/mih-mob-2x.jpg 2x" media="(max-width:767.98px)">
+                    <source srcset="./images/team/mih-tab-1x.jpg, ./images/team/mih-tab-2x.jpg 2x"
+                      media="(min-width:768px) and (max-width:1199.98px)">
+                    <source srcset="./images/team/mih-desk-1x.jpg, ./images/team/mih-desk-2x.jpg 2x" media="(min-width:1200px)">
+                    <img src="./images/team/mih-mob-1x.jpg" alt="Ігор Дем'яненко">
+                </picture>
+
                 <h3 class="team-item__title">Михайло Єрмаков</h3>
                 <p class="team-item__text">UI Designer</p>
                 <ul class="list-soc">
@@ -293,7 +334,7 @@
     <div class="container">
         <h2 class="clients__title">Постійні клієнти</h2>
         <ul class="clients-list">
-            <li>
+            <li class="clients-list__item">
                 <a href="" class="clients-list__link">
                     <svg width="106px" height="60px">
                         <use href="./images/symbol-defs.svg#client1"></use>
@@ -341,11 +382,10 @@
 
 <!-- FOOTER  -->
 
-<footer class="page-footer">
-    <section class="footer container">
+<footer class="footer">
+    <section class="container">
         <div class="footer-contact">
-                <a href="./index.html" class="logo logo--white"><span class="logo__web">Web</span>Studio</a>
-                </a>
+                <a href="./index.html" class="logo logo--white"><span class="logo--blue">Web</span>Studio</a>
             <address>
                 <ul class="adress">
                     <li class="adress__item adress__item--size">
@@ -396,7 +436,7 @@
         <div class="footer-subscr">
             <h4 class="footer-subscr__text">підпишіться на розсилку</h4>
             <form class="subscr-form">
-                <label class="">
+                <label >
                     <input type="email" name="email" placeholder="E-mail" class="subscr-form__label"/>
                 </label>
 

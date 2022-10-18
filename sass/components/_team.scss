@@ -1,73 +1,88 @@
 /* СЕКЦІЯ: НАША КОМАНДА */
+.team {
+  background-color: $sectionBgColor;
+}
 
-// .team {
-//   background-color: $sectionBgColor;
-// }
+.team__title {
 
-// .team__title {
-//   margin-bottom: 50px;
-// }
+  @include breakpoint(tablet-max) {
+    margin-bottom: 30px;
+    @include font(700, 28px, calc(33 / 28));
+  }
 
-// .team-list {
-//   display: flex;
-//   gap: 30px;
-// }
+  @include breakpoint(desktop) {
+    margin-bottom: 50px;
+    @include font(700, 36px, calc(42 / 36));
+  }
+}
 
-// .team-item {
-//   background: $teamListBgColor;
-//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-//     0px 2px 1px rgba(0, 0, 0, 0.2);
-//   border-radius: 0px 0px 4px 4px;
-// }
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
 
-// .team-item__title,
-// .team-item__text {
-//   font-size: 16px;
-//   line-height: 1.19;
-//   text-align: center;
-// }
+  @include breakpoint(mobile-max) {
+    flex-direction: column;
+  }
 
-// .team-item__title {
-//   margin-top: 30px;
-//   margin-bottom: 10px;
+  gap: 30px;
+}
 
-//   color: $secondaryTextColor;
-//   font-weight: 500;
-// }
+.team-item { 
+  
+  background: $teamListBgColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-item__title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 
-// .team-item__text {
-//   font-weight: 400;
-// }
+  @include breakpoint(tablet-max) {
+    @include font(500, 16px, calc(19 / 16));
+  }
 
-// /* soc-icons */
+  color: $secondaryTextColor;
+}
 
-// .list-soc {
-//   display: flex;
-//   justify-content: center;
-//   gap: 10px;
-//   margin: 16px 32px 30px 32px;
-// }
+.team-item__text {
+  text-align: center;
 
-// .list-soc__link {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   padding: 12px;
+  @include font(400, 16px, calc(19 / 16));
+}
 
-//   width: 44px;
-//   height: 44px;
 
-//   border-radius: 50%;
-//   fill: $iconColor;
-//   background-color: $primaryBgColor;
-//   transition: background-color $timeHover $cubicFunction,
-//     fill $timeHover $cubicFunction;
-// }
+/* soc-icons */
 
-// .list-soc__link:hover,
-// .list-soc__link:focus {
-//   background-color: $iconBgColor;
-//   fill: $iconColorAccent;
-// }
+.list-soc {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px 32px 30px 32px;
+}
+
+.list-soc__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  fill: $iconColor;
+  background-color: $primaryBgColor;
+  transition: background-color $timeHover $cubicFunction,
+    fill $timeHover $cubicFunction;
+}
+
+.list-soc__link:hover,
+.list-soc__link:focus {
+  background-color: $iconBgColor;
+  fill: $iconColorWhite;
+}
+
 
 /* ПРИМІТКА ДЛЯ СЕБЕ: для того щоб розщирити вплив ховера та фокуса, задається зміна одразу лінку! <a href="" class="link-soc"> */

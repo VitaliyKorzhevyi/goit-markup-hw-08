@@ -1,0 +1,56 @@
+/* CLIENTS */
+
+.clients {
+  background-color: $clientsBgColor;
+  text-align: center;
+}
+
+.clients__title {
+  @include breakpoint(tablet-max) {
+    margin-bottom: 30px;
+  }
+
+  @include breakpoint(desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.clients-list__item {
+  $items: 2;
+  flex-basis: calc((100% - 30px * ($items - 1)) / $items);
+
+  @include breakpoint(tablet) {
+    $items: 3;
+    flex-basis: calc((100% - 30px * ($items - 1)) / $items);
+  }
+
+  @include breakpoint(desktop) {
+    $items: 6;
+    flex-basis: calc((100% - 30px * ($items - 1)) / $items);
+  }
+}
+
+.clients-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 92px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: $iconColor;
+  transition: fill $timeHover $cubicFunction, border $timeHover $cubicFunction;
+}
+
+.clients-list__link:hover,
+.clients-list__link:focus {
+  fill: $clientsColorAccent;
+  border: 1px solid $clientsBorderAccent;
+}

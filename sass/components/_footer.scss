@@ -1,0 +1,230 @@
+/* FOOTER */
+
+.footer {
+  background-color: $secondaryBgColor;
+  .container {
+    padding: 60px 15px;
+    @include breakpoint(tablet-max) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    @include breakpoint(desktop) {
+      display: flex;
+    }
+  }
+}
+
+.footer-contact {
+  @include breakpoint(mobile-max) {
+    text-align: center;
+  }
+  @include breakpoint(tablet-max) {
+    margin-bottom: 60px;
+  }
+}
+
+.logo--blue {
+  color: $accentTextColor;
+}
+
+.logo--white {
+  color: $tertiaryTextColor;
+}
+
+.adress {
+  margin-top: 20px;
+}
+
+.adress__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.adress__item--size {
+  @include breakpoint(desktop) {
+    width: 231px;
+  }
+}
+
+.adress__link {
+  font-style: normal;
+  @include font(400, 14px, calc(24 / 14));
+  letter-spacing: 0.03em;
+
+  color: $footerTextColor;
+  transition: color $timeHover $cubicFunction;
+}
+
+.adress__link:hover,
+.adress__link:focus {
+  color: $accentTextColor;
+}
+
+.adress__link--geo {
+  color: $tertiaryTextColor;
+}
+
+/* приєднуйтесь */
+
+.footer-soc {
+  @include breakpoint(mobile-max) {
+    margin-bottom: 60px;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+    flex-direction: column;
+    margin-left: 165px;
+  }
+
+  @include breakpoint(desktop) {
+    margin: 12px 93px 0 70px;
+  }
+}
+
+.footer-soc__text {
+  @include font(700, 14px, calc(16 / 14));
+
+  color: $tertiaryTextColor;
+}
+
+.list-join {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.list-join__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  background-color: $iconFooterBgColor;
+  transition: background-color $timeHover $cubicFunction;
+}
+
+.list-join__icon {
+  fill: $iconColorWhite;
+}
+
+.list-join__link:hover {
+  background-color: $iconBgColor;
+}
+
+/* Підпішіться на розсилку */
+
+.footer-subscr {
+  @include breakpoint(desktop) {
+    margin-top: 12px;
+  }
+}
+
+.footer-subscr__text {
+  @include font(700, 14px, calc(16 / 14));
+
+  text-transform: uppercase;
+  color: $tertiaryTextColor;
+}
+
+.subscr-form {
+  @include breakpoint(mobile-max) {
+    width: 100%;
+  }
+
+  @include breakpoint(desktop) {
+    display: flex;
+  }
+  margin-top: 20px;
+}
+
+.subscr-form__label {
+  display: block;
+  height: 50px;
+  padding: 15px 16px;
+
+  @include breakpoint(mobile-max) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(desktop) {
+    width: 358px;
+  }
+
+  background-color: $secondaryBgColor;
+  color: $tertiaryTextColor;
+  border: 1px solid #ffffff4d;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subscr-form input::placeholder {
+  @include font(400, 16px, calc(20 / 16));
+
+  color: $footerTextColor;
+}
+
+.subscr-form__label:-webkit-autofill {
+  -webkit-text-fill-color: $tertiaryTextColor;
+  -webkit-box-shadow: 0 0 0 100px $secondaryBgColor inset;
+}
+
+.subscr-form__label:focus {
+  outline: none;
+}
+
+.subscr-form__btn {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+
+  @include breakpoint(tablet-max) {
+    margin-top: 20px;
+  }
+
+  @include breakpoint(desktop) {
+    margin-left: 12px;
+  }
+
+  padding: 10px 28px;
+
+  width: 200px;
+  height: 50px;
+
+  @include font(700, 16px, calc(30 / 16));
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  color: $tertiaryTextColor;
+  background-color: $primaryBtnBgColor;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background-color $timeHover $cubicFunction;
+}
+
+.subscr-form__btn:hover,
+.subscr-form__btn:focus {
+  background-color: #188ce8;
+}
+
+.subscr-form__icon {
+  margin-left: 10px;
+}
