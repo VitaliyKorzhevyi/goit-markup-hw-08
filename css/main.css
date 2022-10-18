@@ -333,7 +333,7 @@ h3 {
     position: absolute;
     content: "";
     display: block;
-    bottom: -3px;
+    bottom: -1px;
     width: 100%;
     border-radius: 2px;
     border-bottom: 4px solid #2196f3;
