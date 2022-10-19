@@ -8,7 +8,7 @@
       text-align: center;
     }
 
-    @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+    @include breakpoint(tablet-area) {
       display: flex;
       justify-content: center;
       align-items: baseline;
@@ -78,7 +78,7 @@
     flex-direction: column;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+  @include breakpoint(tablet-area) {
     flex-direction: column;
     margin-left: 165px;
   }
@@ -157,7 +157,7 @@
     width: 100%;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+  @include breakpoint(tablet-area) {
     width: 450px;
     margin: 0 auto;
   }

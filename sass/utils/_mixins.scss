@@ -30,6 +30,12 @@
         @content;
       }
     }
+    @if $point==tablet-area {
+      @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+        @content;
+      }
+    }
+    
   }
 
 // retina 2х 

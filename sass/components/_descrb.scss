@@ -15,7 +15,7 @@
 }
 
 .descr__item {
-  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+ @include breakpoint(tablet-area) {
     max-width: 354px;
   }
 
@@ -32,7 +32,7 @@
     margin: 25px 190px;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+ @include breakpoint(tablet-area) {
     margin: 25px 142px;
   }
 

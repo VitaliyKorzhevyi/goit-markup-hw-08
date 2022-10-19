@@ -65,7 +65,7 @@
     padding: 116px 0;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+  @include breakpoint(tablet-area) {
     padding: 118px 0;
   }
 
@@ -82,7 +82,7 @@
   padding-left: 15px;
   padding-right: 15px;
 
-  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+  @include breakpoint(tablet-area) {
     max-width: 390px;
   }
 

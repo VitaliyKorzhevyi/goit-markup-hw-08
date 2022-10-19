@@ -16,7 +16,7 @@
     gap: 15px 8px;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: 1199.98px) {
+  @include breakpoint(tablet-area) {
     margin-bottom: 14px;
   }
 
