@@ -41,6 +41,8 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 textarea {
@@ -599,6 +601,21 @@ h3 {
 }
 
 /* СЕКЦІЯ З ОПИСОМ */
+@media screen and (max-width: 767.98px) {
+  .descr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 @media screen and (min-width: 768px) {
   .descr {
     display: -webkit-box;
@@ -615,35 +632,35 @@ h3 {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 768px) {
   .descr__item {
-    max-width: 354px;
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .descr__item {
-    max-width: 270px;
+    -ms-flex-preferred-size: calc((100% - 90px) / 4);
+        flex-basis: calc((100% - 90px) / 4);
   }
+}
+
+.descr__thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 .descr__icon {
   height: 70px;
   width: 70px;
-}
-@media screen and (max-width: 767.98px) {
-  .descr__icon {
-    margin: 25px 190px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .descr__icon {
-    margin: 25px 142px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .descr__icon {
-    margin: 25px 100px;
-  }
 }
 
 .descr__title {
@@ -747,6 +764,7 @@ h3 {
 }
 
 .team-item {
+  width: 100%;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1341,8 +1359,8 @@ h3 {
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);

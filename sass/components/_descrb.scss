@@ -1,6 +1,13 @@
 /* СЕКЦІЯ З ОПИСОМ */
 
 .descr {
+  @include breakpoint(mobile-max) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
   @include breakpoint(tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -14,31 +21,52 @@
   }
 }
 
-.descr__item {
- @include breakpoint(tablet-area) {
-    max-width: 354px;
+.descr__item {     
+
+  @include breakpoint(tablet) {
+    $items: 2;
+    flex-basis: calc((100% - 30px * ($items - 1)) / $items);
   }
 
   @include breakpoint(desktop) {
-    max-width: 270px;
+    $items: 4;
+    flex-basis: calc((100% - 30px * ($items - 1)) / $items);
   }
 }
 
+// .descr__item {
+//  @include breakpoint(tablet-area) {
+//     max-width: 354px;
+//   }
+
+//   @include breakpoint(desktop) {
+//     max-width: 270px;
+//   }
+// }
+
+.descr__thumb {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+}
+
 .descr__icon {
+
   height: 70px;
   width: 70px;
 
-  @include breakpoint(mobile-max) {
-    margin: 25px 190px;
-  }
+//   @include breakpoint(mobile-max) {
+//     margin: 25px 190px;
+//   }
 
- @include breakpoint(tablet-area) {
-    margin: 25px 142px;
-  }
+//  @include breakpoint(tablet-area) {
+//     margin: 25px 142px;
+//   }
 
-  @include breakpoint(desktop) {
-    margin: 25px 100px;
-  }
+//   @include breakpoint(desktop) {
+//     margin: 25px 100px;
+//   }
 }
 
 .descr__title {
