@@ -168,6 +168,21 @@ h3 {
   margin: -1px;
 }
 
+.reveal {
+  position: relative;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  opacity: 0;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+
+.reveal.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
 /* HEADER */
 .header {
   background-color: #ffffff;
@@ -464,7 +479,7 @@ h3 {
 
 @media screen and (min-width: 768px) {
   .contacts__link:hover,
-.contacts__link:focus {
+  .contacts__link:focus {
     color: #2196f3;
   }
 }
@@ -1780,8 +1795,7 @@ h3 {
 }
 
 .checkbox__label--accent {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #2196f3;
 }
 
